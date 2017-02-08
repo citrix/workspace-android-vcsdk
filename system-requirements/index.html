@@ -193,6 +193,7 @@ security software must enable Citrix Receiver for Android to do a secondary laun
 <p><strong>Client-side portion on the Android device</strong></p>
 <p>The client-side custom virtual channel driver executes in the context of the client. You must write your virtual driver. For the Android client, the custom virtual driver must be implemented as a service, communicating with Citrix Receiver for Android through the AIDL interfaces provided in this version of the Virtual Channel SDK. If you want to create several virtual channels, you must implement one virtual driver for each channel.</p>
 <p>This figure illustrates the virtual channel client-server connection:</p>
+<p><img alt="" src="../vc_protocol.png" /></p>
 <p>Citrix Receiver for Android is responsible for demultiplexing the virtual channel data from the ICA data stream and routing it to the correct processing module (in this case, the virtual driver). It is also responsible for gathering and sending virtual channel data to the server through the ICA connection. Citrix Receiver for Android does not know any data package detail for each virtual channel and it only transfers all available data between the server and the client virtual driver.</p>
 <p>The following is an overview of the client-server data exchange using a virtual channel:</p>
 <ol>
