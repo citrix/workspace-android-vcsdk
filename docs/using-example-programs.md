@@ -85,7 +85,7 @@ The Mix program demonstrates the following sequence of events. See the graphic b
 
 This figure illustrates the sequence of events that occur when you use the Mix program, starting at the top.
 
-![](media/image4.png)
+![](./ping-sequence-of-events.png)
 
 ## Over
 
@@ -124,7 +124,7 @@ Byte 4-5 uCounter; // seqUencer
 
 This figure illustrates the sequence of events that occur when you use the Over program, starting at the top.
 
-![](media/image5.png)
+![](./over-sequence-of-events.png =625x)
 
 ## Building Examples
 
