@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Programming Reference - Citrix Virtual Channel SDK</title>
+  
+
+  <link rel="shortcut icon" href="
+https://www.citrix.com/etc/designs/citrix/icon-favicon.png">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  <link rel="stylesheet" href="../css/override.css" type="text/css" />
+  <link rel="stylesheet" href="../css/font-awesome.css" type="text/css" />
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Programming Reference";
+    var mkdocs_page_input_path = "programming-reference.md";
+    var mkdocs_page_url = "/programming-reference/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script>
+  <script src="../js/custom.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+	<div class="header-top">
+		<div class="header-top-left">
+			<a href="http://citrix.github.io" class="logo-position"><img height="60" src="https://thumbnail-ec2.sharefile.com/thumbnail.aspx?encparams=ypL2J0l-In6gqXJ7yeyKP8A1rqwKMH-C8-nfkJcHJNIN7Y0yZiJsYOcUe-uc0YeZzWLQSFSd1FnuMHPa30XSSINHuGOA8nvvnBT5WmjGlKvd5mxJ4IfT7iTVyHELwhWQiNCznPCiIFyhkA78uKX77PlU2iyhM4YdRM1NKabBe-4wXuiFJsbtAxyJ2UukO_E2ZSf1W3l75Dw8G0zflVkT-EFqyx1zSGId0qzLjm6nzJ8dA9zo-1AJzUisdzmGMzHOq_LMsOWyaalvmcWvCkl-q10GBSbfekfTIFW9LpZNYjkLNSnK8rcwNjWVr_jYayrGjIj2e5dDIMiDj3NRvW51AvHRjxYH9xRRRtY$" target="_blank" class="logo-citrix"><span style="color:#fff;font-size: 20px;position: relative;top:4px;left: 5px">SDK Reference</span></a>
+		</div>
+		<div class="header-top-right">
+			<ul>
+			<!--	<li class="list-inline home"><a href="..">HOME</a></li>
+				<li class="list-inline support"><a href="http://support.citrix.com">SUPPORT</a></li>-->
+				<form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+            <li class="list-inline support"><input name="q" id="txtName" type="text" placeholder="Search SDKs" 
+            class="searchdocs">
+<a class="fa fa-search errspan"></a></li>
+</form>
+				<!--<li class="list-inline"><a href="http://citrix.com/download">DOWNLOADS</a></li>-->
+			</ul>
+
+		</div>
+	</div>
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+	<i class="fa fa-search"></i>
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" style="width:250px;" href="..">The Citrix Virtual Channel SDK</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" style="width:250px;" href="../system-requirements/">System Requirements</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" style="width:250px;" href="../using-example-programs/">Using Example Programs</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" style="width:250px;" href="../programming-guide/">Programming Guide</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" style="width:250px;" href="../known-limitations/">Known Limitations</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <span class="expli"><i class="fa fa-plus-square-o" aria-hidden="true"></i></span><a class="current" style="width:250px;" href="./">Programming Reference</a>
+        
+            <ul style="display:none">
+            
+                <li class="toctree-l3"><a href="#programming-reference">Programming Reference</a></li>
+                
+                    <li><a class="toctree-l4" href="#canload">canLoad</a></li>
+                
+                    <li><a class="toctree-l4" href="#getdisplayname">getDisplayName</a></li>
+                
+                    <li><a class="toctree-l4" href="#getminversionnumber">getMinVersionNumber</a></li>
+                
+                    <li><a class="toctree-l4" href="#getmaxversionnumber">getMaxVersionNumber</a></li>
+                
+                    <li><a class="toctree-l4" href="#getvcname">getVCName</a></li>
+                
+                    <li><a class="toctree-l4" href="#initializedriver">initializeDriver</a></li>
+                
+                    <li><a class="toctree-l4" href="#getdriverinfo">getDriverInfo</a></li>
+                
+                    <li><a class="toctree-l4" href="#driverstart">driverStart</a></li>
+                
+                    <li><a class="toctree-l4" href="#icadataarrival">icaDataArrival</a></li>
+                
+                    <li><a class="toctree-l4" href="#drivershutdown">driverShutdown</a></li>
+                
+                    <li><a class="toctree-l4" href="#senddata">sendData</a></li>
+                
+                    <li><a class="toctree-l4" href="#confirmshutdown">confirmShutdown</a></li>
+                
+                    <li><a class="toctree-l4" href="#writeint2">writeInt2</a></li>
+                
+                    <li><a class="toctree-l4" href="#writeint4">writeInt4</a></li>
+                
+                    <li><a class="toctree-l4" href="#writeint2_1">writeInt2</a></li>
+                
+                    <li><a class="toctree-l4" href="#writeint4_1">writeInt4</a></li>
+                
+                    <li><a class="toctree-l4" href="#readint2">readInt2</a></li>
+                
+                    <li><a class="toctree-l4" href="#readint4">readInt4</a></li>
+                
+                    <li><a class="toctree-l4" href="#readuint2">readUInt2</a></li>
+                
+                    <li><a class="toctree-l4" href="#readuint1">readUInt1</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+         <!-- <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Programming Reference</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div> -->
+          <div role="main">
+            <div class="section">
+             
+                <h1 id="programming-reference">Programming Reference<a class="headerlink" href="#programming-reference" title="Permanent link">&para;</a></h1>
+<p>For function summaries, see:</p>
+<ul>
+<li>AIDL Interfaces Overview</li>
+</ul>
+<h2 id="canload"><code>canLoad</code><a class="headerlink" href="#canload" title="Permanent link">&para;</a></h2>
+<p>Determines whether this driver can be loaded without error. It is the
+first remote call in the Reicever.</p>
+<h3 id="calling-convention">Calling Convention<a class="headerlink" href="#calling-convention" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>boolean canLoad();
+</pre></div>
+
+
+<h3 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h3>
+<p>None</p>
+<h3 id="return-values">Return Values<a class="headerlink" href="#return-values" title="Permanent link">&para;</a></h3>
+<p>If virtual driver is ready to work, the returned value is true. If not, returns <code>false</code>.</p>
+<h3 id="remarks">Remarks<a class="headerlink" href="#remarks" title="Permanent link">&para;</a></h3>
+<p>When this method returns the value false, the virtual channel for this
+virtual driver cannot be created. That means the virtual driver cannot
+work in the ICA session.</p>
+<h2 id="getdisplayname"><code>getDisplayName</code><a class="headerlink" href="#getdisplayname" title="Permanent link">&para;</a></h2>
+<p>Returns display name of virtual channel and it is sent to the server.</p>
+<h3 id="calling-convention_1">Calling Convention<a class="headerlink" href="#calling-convention_1" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>String getDisplayName();
+</pre></div>
+
+
+<h3 id="parameters_1">Parameters<a class="headerlink" href="#parameters_1" title="Permanent link">&para;</a></h3>
+<p>None</p>
+<h3 id="return-values_1">Return Values<a class="headerlink" href="#return-values_1" title="Permanent link">&para;</a></h3>
+<p>Returns display name of virtual channel as String.</p>
+<h3 id="remarks_1">Remarks<a class="headerlink" href="#remarks_1" title="Permanent link">&para;</a></h3>
+<p>Display name is a friendly name of virtual channel, used to report
+errors.</p>
+<h2 id="getminversionnumber"><code>getMinVersionNumber</code><a class="headerlink" href="#getminversionnumber" title="Permanent link">&para;</a></h2>
+<p>Returns <code>minVersion</code>, the lowest supported version of this virtual channel, used to allow version
+negotiation between the client-side and the server-side components.</p>
+<h3 id="calling-convention_2">Calling Convention<a class="headerlink" href="#calling-convention_2" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>int getMinVersionNumber();
+</pre></div>
+
+
+<h3 id="parameters_2">Parameters<a class="headerlink" href="#parameters_2" title="Permanent link">&para;</a></h3>
+<p>None</p>
+<h3 id="return-value">Return Value<a class="headerlink" href="#return-value" title="Permanent link">&para;</a></h3>
+<p>The lowest supported version of this virtual channel.</p>
+<h3 id="remarks_2">Remarks<a class="headerlink" href="#remarks_2" title="Permanent link">&para;</a></h3>
+<p>Regarding the usage of virtual channel version, refers to Design Suggesstions.</p>
+<h2 id="getmaxversionnumber"><code>getMaxVersionNumber</code><a class="headerlink" href="#getmaxversionnumber" title="Permanent link">&para;</a></h2>
+<p>Returns <code>maxVersion</code> the highest supported version of this virtual channel, used to allow version
+negotiation between the client-side and the server-side components.</p>
+<h3 id="calling-convention_3">Calling Convention<a class="headerlink" href="#calling-convention_3" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>int getMaxVersionNumber();
+</pre></div>
+
+
+<h3 id="parameters_3">Parameters<a class="headerlink" href="#parameters_3" title="Permanent link">&para;</a></h3>
+<p>None</p>
+<h3 id="return-value_1">Return Value<a class="headerlink" href="#return-value_1" title="Permanent link">&para;</a></h3>
+<p>The highest supported version of this virtual channel.</p>
+<h3 id="remarks_3">Remarks<a class="headerlink" href="#remarks_3" title="Permanent link">&para;</a></h3>
+<p>Regarding the usage of virtual channel version, refers to Design Suggesstions.</p>
+<h2 id="getvcname">getVCName<a class="headerlink" href="#getvcname" title="Permanent link">&para;</a></h2>
+<p>Returns the virtual channel name, send to identify
+the virtual channel to the server.</p>
+<h3 id="calling-convention_4">Calling Convention<a class="headerlink" href="#calling-convention_4" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>String getVCName();
+</pre></div>
+
+
+<h3 id="parameters_4">Parameters<a class="headerlink" href="#parameters_4" title="Permanent link">&para;</a></h3>
+<p>None</p>
+<h3 id="return-values_2">Return Values<a class="headerlink" href="#return-values_2" title="Permanent link">&para;</a></h3>
+<p>Returns the virtual channel name.</p>
+<h3 id="remarks_4">Remarks<a class="headerlink" href="#remarks_4" title="Permanent link">&para;</a></h3>
+<p>Each virtual channel has a unique name to identify itself. For more information, see Naming Virtual Channels.</p>
+<h2 id="initializedriver">initializeDriver<a class="headerlink" href="#initializedriver" title="Permanent link">&para;</a></h2>
+<p>This method is for service to do initialization work before the virtual channel starts.</p>
+<h3 id="calling-convention_5">Calling Convention<a class="headerlink" href="#calling-convention_5" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>boolean initializeDriver ();
+</pre></div>
+
+
+<h3 id="parameters_5">Parameters<a class="headerlink" href="#parameters_5" title="Permanent link">&para;</a></h3>
+<p>None</p>
+<h3 id="return-values_3">Return Values<a class="headerlink" href="#return-values_3" title="Permanent link">&para;</a></h3>
+<p>Returns boolean value showing the status of initialization. If initialization is successful, this method returns the value true. If unsuccessful, this method returns the value false.</p>
+<h3 id="remarks_5">Remarks<a class="headerlink" href="#remarks_5" title="Permanent link">&para;</a></h3>
+<p>If this method returns false, a virtual channel for this method cannot be created.</p>
+<h2 id="getdriverinfo">getDriverInfo<a class="headerlink" href="#getdriverinfo" title="Permanent link">&para;</a></h2>
+<p>When an ICA session starts, it calls this method to retrieve module-specific information for transmission to the server. This information returns to the server side of the virtual channel by <code>WFVirtualChannelQuery()</code>.</p>
+<h3 id="calling-convention_6">Calling Convention<a class="headerlink" href="#calling-convention_6" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>byte[] getDriverInfo();
+</pre></div>
+
+
+<h3 id="parameters_6">Parameters<a class="headerlink" href="#parameters_6" title="Permanent link">&para;</a></h3>
+<p>None</p>
+<h3 id="return-value_2">Return Value<a class="headerlink" href="#return-value_2" title="Permanent link">&para;</a></h3>
+<p>Returns <code>byte[]</code>, the output byte array to be sent to the server.</p>
+<h3 id="remarks_6">Remarks<a class="headerlink" href="#remarks_6" title="Permanent link">&para;</a></h3>
+<h2 id="driverstart">driverStart<a class="headerlink" href="#driverstart" title="Permanent link">&para;</a></h2>
+<p>Called when the virtual driver is started by Citrix Receiver for Android.</p>
+<h3 id="calling-convention_7">Calling Convention<a class="headerlink" href="#calling-convention_7" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>void driverStart(in IVCCallback cb);
+</pre></div>
+
+
+<h3 id="parameters_7">Parameters<a class="headerlink" href="#parameters_7" title="Permanent link">&para;</a></h3>
+<p><strong>cb</strong></p>
+<p>The callback provided to the virtual driver service.</p>
+<h3 id="return-value_3">Return Value<a class="headerlink" href="#return-value_3" title="Permanent link">&para;</a></h3>
+<p>None</p>
+<h3 id="remarks_7">Remarks<a class="headerlink" href="#remarks_7" title="Permanent link">&para;</a></h3>
+<p>The instance of <code>IVCCallback</code> is passed to the virtual driver in this method. Citrix recommends that you must not call <code>sendData</code> in <code>driverStart</code>. The callbacks must be used after <code>driverStart</code> returns.</p>
+<h2 id="icadataarrival">icaDataArrival<a class="headerlink" href="#icadataarrival" title="Permanent link">&para;</a></h2>
+<p>This method is called repeatedly when the virtual driver is running. The
+implementation must read command bytes from its vStream byte array and
+process them accordingly.</p>
+<h3 id="calling-convention_8">Calling Convention<a class="headerlink" href="#calling-convention_8" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>void icaDataArrival(in byte[] vStream);
+</pre></div>
+
+
+<h3 id="parameters_8">Parameters<a class="headerlink" href="#parameters_8" title="Permanent link">&para;</a></h3>
+<p><strong>vStream</strong></p>
+<p>The byte array used to read data from the server component of the virtual channel.</p>
+<h3 id="return-value_4">Return Value<a class="headerlink" href="#return-value_4" title="Permanent link">&para;</a></h3>
+<p>None</p>
+<h3 id="remarks_8">Remarks<a class="headerlink" href="#remarks_8" title="Permanent link">&para;</a></h3>
+<p>Because Citrix Receiver for Android does not know any package detail, it only transfers all available data from ICA stream to the virtual driver by calling this method. If the virtual channel package is too large, the whole package may not arrive at the same time. That means the implementation of this method must have the ability to handle partial package. See Ping, Over
+and Mix sample codes, which provide examples about how to handle partial package.</p>
+<p>If the server-application sends several packages continuously, more than one package may come in the same byte array. Thus, the implementation of this method must have the ability to handle more than one package in the array. See Over and Mix sample codes, which provide the example about how to handle more than one packages in one byte array. For Ping sample, server application sends data synchronously. The server waits for the client to reply before sending the next packet, so Ping sample doesn’t need to handle this scenario.</p>
+<h2 id="drivershutdown">driverShutdown<a class="headerlink" href="#drivershutdown" title="Permanent link">&para;</a></h2>
+<p>Called when virtual channel is shut down by Citrix Receiver for Android.</p>
+<h3 id="calling-convention_9">Calling Convention<a class="headerlink" href="#calling-convention_9" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>void driverShutdown();
+</pre></div>
+
+
+<h3 id="parameters_9">Parameters<a class="headerlink" href="#parameters_9" title="Permanent link">&para;</a></h3>
+<p>None</p>
+<h3 id="return-value_5">Return Value<a class="headerlink" href="#return-value_5" title="Permanent link">&para;</a></h3>
+<p>None</p>
+<h3 id="remarks_9">Remarks<a class="headerlink" href="#remarks_9" title="Permanent link">&para;</a></h3>
+<p>This method is to inform the virtual driver that the virtual channel
+closes. Once virtual channel closes, data cannot be sent to server. And
+Citrix Receiver for Android waits for confirmation after calling this
+method. If virtual driver doesn’t call <code>confirmShutdown()</code> to confirm in
+time, virtual channel keeps close.</p>
+<h2 id="senddata">sendData<a class="headerlink" href="#senddata" title="Permanent link">&para;</a></h2>
+<p>To send a package of channel protocol to the server.</p>
+<h3 id="calling-convention_10">Calling Convention<a class="headerlink" href="#calling-convention_10" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>void sendData(in byte[] data, in int off, in int length);
+</pre></div>
+
+
+<h3 id="parameters_10">Parameters<a class="headerlink" href="#parameters_10" title="Permanent link">&para;</a></h3>
+<p><strong>data</strong></p>
+<p>The data as byte array is to be sent to the server side.</p>
+<p><strong>off</strong></p>
+<p>The start offset in the data array.</p>
+<p><strong>length</strong></p>
+<p>Length the number of bytes to send.</p>
+<h3 id="return-value_6">Return Value<a class="headerlink" href="#return-value_6" title="Permanent link">&para;</a></h3>
+<p>None.</p>
+<h3 id="remarks_10">Remarks<a class="headerlink" href="#remarks_10" title="Permanent link">&para;</a></h3>
+<p>This method must be used after driverStart returns and before <code>driverShutdown</code> is called.</p>
+<h2 id="confirmshutdown">confirmShutdown<a class="headerlink" href="#confirmshutdown" title="Permanent link">&para;</a></h2>
+<p>Called to confirm that the virtual channel can be shut down. It must be
+called after <code>driverShutdown()</code> is called. Once confirmed, data sent to
+the server component are ignored.</p>
+<h3 id="calling-convention_11">Calling Convention<a class="headerlink" href="#calling-convention_11" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>void confirmShutdown();
+</pre></div>
+
+
+<h3 id="parameters_11">Parameters<a class="headerlink" href="#parameters_11" title="Permanent link">&para;</a></h3>
+<p>None</p>
+<h3 id="return-value_7">Return Value<a class="headerlink" href="#return-value_7" title="Permanent link">&para;</a></h3>
+<p>None</p>
+<h3 id="remarks_11">Remarks<a class="headerlink" href="#remarks_11" title="Permanent link">&para;</a></h3>
+<p>To make sure that all data sent from the Client is done, and it is safe
+to terminate the channel. This method must be called after
+driverShutdown is called. When <code>driverShutdown</code> is called, Citrix Receiver
+for Android waits for confirmation. Virtual driver can call
+confirmShutdown to confirm that the virtual channel can be closed. And
+if this method is not called in time, the virtual channel is still
+closed.</p>
+<h2 id="writeint2">writeInt2<a class="headerlink" href="#writeint2" title="Permanent link">&para;</a></h2>
+<p>Writes an int to a buffer in the form of two bytes, little endian order.</p>
+<h3 id="calling-convention_12">Calling Convention<a class="headerlink" href="#calling-convention_12" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>int writeInt2(byte[] buffer, int offset, int i)
+</pre></div>
+
+
+<h3 id="parameters_12">Parameters<a class="headerlink" href="#parameters_12" title="Permanent link">&para;</a></h3>
+<p><strong>buffer</strong></p>
+<p>The buffer to write the integer to.</p>
+<p><strong>offset</strong></p>
+<p>Offset from the start of buffer, where this method starts writing the
+int.</p>
+<p><strong>i</strong></p>
+<p>The int to write.</p>
+<h3 id="return-value_8">Return Value<a class="headerlink" href="#return-value_8" title="Permanent link">&para;</a></h3>
+<p>Returns offset + 2.</p>
+<h3 id="remarks_12">Remarks<a class="headerlink" href="#remarks_12" title="Permanent link">&para;</a></h3>
+<h2 id="writeint4">writeInt4<a class="headerlink" href="#writeint4" title="Permanent link">&para;</a></h2>
+<p>Writes an int to a buffer in the form of four bytes, little endian
+order.</p>
+<h3 id="calling-convention_13">Calling Convention<a class="headerlink" href="#calling-convention_13" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>int writeInt4(byte[] buffer, int offset, int i)
+</pre></div>
+
+
+<h3 id="parameters_13">Parameters<a class="headerlink" href="#parameters_13" title="Permanent link">&para;</a></h3>
+<p><strong>buffer</strong></p>
+<p>The buffer to write the integer to.</p>
+<p><strong>offset</strong></p>
+<p>Offset from the start of buffer, where this method will start writing
+the int.</p>
+<p><strong>i</strong></p>
+<p>The int to write.</p>
+<h3 id="return-value_9">Return Value<a class="headerlink" href="#return-value_9" title="Permanent link">&para;</a></h3>
+<p>Returns offset + 4.</p>
+<h3 id="remarks_13">Remarks<a class="headerlink" href="#remarks_13" title="Permanent link">&para;</a></h3>
+<h2 id="writeint2_1">writeInt2<a class="headerlink" href="#writeint2_1" title="Permanent link">&para;</a></h2>
+<p>Writes an int to an output stream in the form of two bytes, little
+endian order.</p>
+<h3 id="calling-convention_14">Calling Convention<a class="headerlink" href="#calling-convention_14" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>void writeInt2(ByteArrayOutputStream stream, int i)
+</pre></div>
+
+
+<h3 id="parameters_14">Parameters<a class="headerlink" href="#parameters_14" title="Permanent link">&para;</a></h3>
+<p><strong>stream</strong></p>
+<p>The stream to write the integer to.</p>
+<p><strong>i</strong></p>
+<p>The int to write.</p>
+<h3 id="return-value_10">Return Value<a class="headerlink" href="#return-value_10" title="Permanent link">&para;</a></h3>
+<h3 id="remarks_14">Remarks<a class="headerlink" href="#remarks_14" title="Permanent link">&para;</a></h3>
+<h2 id="writeint4_1">writeInt4<a class="headerlink" href="#writeint4_1" title="Permanent link">&para;</a></h2>
+<p>Writes an int to an output stream in the form of four bytes, little endian order.</p>
+<h3 id="calling-convention_15">Calling Convention<a class="headerlink" href="#calling-convention_15" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>void writeInt4(ByteArrayOutputStream stream, int i)
+</pre></div>
+
+
+<h3 id="parameters_15">Parameters<a class="headerlink" href="#parameters_15" title="Permanent link">&para;</a></h3>
+<p><strong>stream</strong></p>
+<p>The stream to write the integer to.</p>
+<p><strong>i</strong></p>
+<p>The int to write.</p>
+<h3 id="return-value_11">Return Value<a class="headerlink" href="#return-value_11" title="Permanent link">&para;</a></h3>
+<h3 id="remarks_15">Remarks<a class="headerlink" href="#remarks_15" title="Permanent link">&para;</a></h3>
+<h2 id="readint2">readInt2<a class="headerlink" href="#readint2" title="Permanent link">&para;</a></h2>
+<p>Reads two bytes from a byte array in little endian order and creates a 2
+byte short.</p>
+<h3 id="calling-convention_16">Calling Convention<a class="headerlink" href="#calling-convention_16" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>short readInt2(byte[] buffer, int index)
+</pre></div>
+
+
+<h3 id="parameters_16">Parameters<a class="headerlink" href="#parameters_16" title="Permanent link">&para;</a></h3>
+<p><strong>buffer</strong></p>
+<p>The buffer to read the short integer from.</p>
+<p><strong>offset</strong></p>
+<p>Offset from the start of buffer, where this method starts reading the
+short integer.</p>
+<h3 id="return-value_12">Return Value<a class="headerlink" href="#return-value_12" title="Permanent link">&para;</a></h3>
+<p>Returns the short integer.</p>
+<h3 id="remarks_16">Remarks<a class="headerlink" href="#remarks_16" title="Permanent link">&para;</a></h3>
+<h2 id="readint4">readInt4<a class="headerlink" href="#readint4" title="Permanent link">&para;</a></h2>
+<p>Reads four bytes from a byte array in little endian order and creates a
+4 byte integer.</p>
+<h3 id="calling-convention_17">Calling Convention<a class="headerlink" href="#calling-convention_17" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>int readInt4(byte[] buffer, int index)
+</pre></div>
+
+
+<h3 id="parameters_17">Parameters<a class="headerlink" href="#parameters_17" title="Permanent link">&para;</a></h3>
+<p><strong>buffer</strong></p>
+<p>The buffer to read the integer from.</p>
+<p><strong>offset</strong></p>
+<p>Offset from the start of buffer, where this method starts reading the
+integer.</p>
+<h3 id="return-value_13">Return Value<a class="headerlink" href="#return-value_13" title="Permanent link">&para;</a></h3>
+<p>Returns the integer.</p>
+<h3 id="remarks_17">Remarks<a class="headerlink" href="#remarks_17" title="Permanent link">&para;</a></h3>
+<h2 id="readuint2">readUInt2<a class="headerlink" href="#readuint2" title="Permanent link">&para;</a></h2>
+<p>Reads two bytes from a byte array in little endian order and creates an
+unsigned value stored in an integer.</p>
+<h3 id="calling-convention_18">Calling Convention<a class="headerlink" href="#calling-convention_18" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>int readUInt2(byte[] buffer, int index)
+</pre></div>
+
+
+<h3 id="parameters_18">Parameters<a class="headerlink" href="#parameters_18" title="Permanent link">&para;</a></h3>
+<p><strong>buffer</strong></p>
+<p>The buffer to read the unsigned integer from.</p>
+<p><strong>offset</strong></p>
+<p>Offset from the start of buffer, where this method starts reading the
+unsigned integer.</p>
+<h3 id="return-value_14">Return Value<a class="headerlink" href="#return-value_14" title="Permanent link">&para;</a></h3>
+<p>Returns the unsigned integer.</p>
+<h3 id="remarks_18">Remarks<a class="headerlink" href="#remarks_18" title="Permanent link">&para;</a></h3>
+<h2 id="readuint1">readUInt1<a class="headerlink" href="#readuint1" title="Permanent link">&para;</a></h2>
+<p>Reads one byte from a byte array in little endian order and creates an
+unsigned value stored in an integer.</p>
+<h3 id="calling-convention_19">Calling Convention<a class="headerlink" href="#calling-convention_19" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>int readUInt1(byte[] buffer, int index)
+</pre></div>
+
+
+<h3 id="parameters_19">Parameters<a class="headerlink" href="#parameters_19" title="Permanent link">&para;</a></h3>
+<p><strong>buffer</strong></p>
+<p>The buffer to read the unsigned integer from.</p>
+<p><strong>offset</strong></p>
+<p>Offset from the start of buffer, where this method starts reading the
+unsigned integer.</p>
+<h3 id="return-value_15">Return Value<a class="headerlink" href="#return-value_15" title="Permanent link">&para;</a></h3>
+<p>Returns the unsigned integer.</p>
+<h3 id="remarks_19">Remarks<a class="headerlink" href="#remarks_19" title="Permanent link">&para;</a></h3>
+              
+               
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<!--<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span class="prev"><a href="../known-limitations/"><i class="fa fa-angle-left"></i> Previous</a></span>
+      
+      
+    </span>
+	<div class="footer-right">
+		<ul class="social-links">
+			<li class="list-inline"><a href="https://twitter.com/citrix"><i class="fa fa-twitter"></i>@citrix</a></li>
+			<li class="list-inline"><a href="mailto:support@citrix.com"><i class="fa fa-envelope-o"></i>support@citrix.com</a></li>
+		</ul>
+		<ul class="inner-pages">
+			<li class="list-inline"><a href="http://citrix.com/about/legal">Privacy and Terms</li>
+		</ul>
+	</div>
+</div>-->
+
+</body>
+</html>
