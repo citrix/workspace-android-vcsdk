@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Programming Guide - Citrix Virtual Channel SDK</title>
+  
+
+  <link rel="shortcut icon" href="
+https://www.citrix.com/etc/designs/citrix/icon-favicon.png">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  <link rel="stylesheet" href="../css/override.css" type="text/css" />
+  <link rel="stylesheet" href="../css/font-awesome.css" type="text/css" />
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Programming Guide";
+    var mkdocs_page_input_path = "programming-guide.md";
+    var mkdocs_page_url = "/programming-guide/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script>
+  <script src="../js/custom.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+	<div class="header-top">
+		<div class="header-top-left">
+			<a href="http://citrix.github.io" class="logo-position"><img height="60" src="https://www.citrix.com/content/dam/citrix/en_us/images/logos/citrix/citrix-logo-reverse.png" target="_blank" class="logo-citrix"><span style="color:#fff;font-size: 20px;position: relative;top:4px;left: 5px">SDK Reference</span></a>
+		</div>
+		<div class="header-top-right">
+			<ul>
+			<!--	<li class="list-inline home"><a href="..">HOME</a></li>
+				<li class="list-inline support"><a href="http://support.citrix.com">SUPPORT</a></li>-->
+			<form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+            <li class="list-inline support"><input name="q" id="txtName" type="text" placeholder="Search SDKs" 
+            class="searchdocs"><a class="fa fa-search errspan" onclick="getElementById('rtd-search-form').submit()"></a></li>
+			</form>
+				<!--<li class="list-inline"><a href="http://citrix.com/download">DOWNLOADS</a></li>-->
+			</ul>
+
+		</div>
+	</div>
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+	<a class="fa fa-search" onclick="getElementById('rtd-search-form').submit()"></a>
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 nochildli ">
+        <a class="" style="width:322px;" href="..">The Citrix Virtual Channel SDK</a>
+
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 nochildli ">
+        <a class="" style="width:322px;" href="../system-requirements/">System Requirements</a>
+
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 nochildli ">
+        <a class="" style="width:322px;" href="../using-example-programs/">Using Example Programs</a>
+
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 nochildli current">
+        <a class="current" style="width:322px;" href="./">Programming Guide</a>
+
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 nochildli ">
+        <a class="" style="width:322px;" href="../known-limitations/">Known Limitations</a>
+
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 nochildli ">
+        <a class="" style="width:322px;" href="../programming-reference/">Programming Reference</a>
+
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+         <!-- <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Programming Guide</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div> -->
+          <div role="main">
+            <div class="section">
+             
+                <h1 id="programming-guide">Programming Guide<a class="headerlink" href="#programming-guide" title="Permanent link">&para;</a></h1>
+<p>This version of Virtual Channel SDK illustrates how to implement the client virtual driver for the Android client. You can find resources on the Citrix website or by contacting us.</p>
+<p>The client virtual driver for the Android client must be implemented as an Android service. The APIs in IVCService.aidl are to be implemented by the virtual driver.</p>
+<p>This SDK provides a helper class to make the implementation more convenient.</p>
+<h2 id="design-suggestions">Design Suggestions<a class="headerlink" href="#design-suggestions" title="Permanent link">&para;</a></h2>
+<p>Follow these suggestions to make your virtual channels easier to design
+and enhance:</p>
+<ul>
+<li>
+<p>When you design your own virtual channel protocol, allow for the flexibility to add features. Virtual channels have version numbers that are exchanged during initialization so that both the client and the server detect the maximum level of functionality that can be used. For example, if the client is at Version 3 and the server is at Version 5, the server does not send any packets with functionality beyond Version 3 because the client does not know how to interpret the newer packets.</p>
+</li>
+<li>
+<p>Because you can implement the server side of a virtual channel protocol as a separate process, it is easier to write code that interfaces with the Citrix-provided virtual channel support on the server than on the client (where the code must fit into an existing code structure). The server side of a virtual channel simply opensthe channel, reads from and writes to it, and closes it when done.</p>
+</li>
+<li>
+<p>Writing code for the server-side is similar to writing an application that uses services exported by the system. It is easier to write an application to handle the virtual channel communication because it can then be run once for each ICA connection supporting the virtual channel.</p>
+</li>
+<li>
+<p>If you are designing new hardware for use with new virtual channels (for example, an improved compressed video format), make sure the hardware can be detected so that the client can determine whether or not it is installed. Then the client can communicate to the server if the hardware is available before the server uses the new data format. Optionally, you could have the virtual driver translate the new data format for use with older hardware.</p>
+</li>
+<li>
+<p>There might be limitations preventing your new virtual channel from performing at an optimum level. If the client is might not be sufficient bandwidth to properly support audio or video data. You can make your protocol adaptive, so that as
+    bandwidth decreases, performance degrades gracefully, possibly by
+    sending sound normally but reducing the frame rate of the video to
+    fit the available bandwidth.</p>
+</li>
+<li>
+<p>To identify where problems are occurring (connection,
+    implementation, or protocol), first get the connection and
+    communication working. Then, after the virtual channel is complete
+    and debugged, do some time trials and record the results. These
+    results establish a baseline for measuring further optimizations
+    such as compression and other enhancements so that the channel
+    requires less bandwidth.</p>
+</li>
+<li>
+<p>Citrix Receiver for Android binds the virtual driver service using
+    the Android API bindService with flag <code>BIND\_AUTO\_CREATE</code> set. That
+    means that if the service has not been started before the ICA
+    session launches, Citrix Receiver for Android starts this
+    service automatically. So the virtual driver you write must never
+    block or perform time-consuming task in the <code>onCreate()</code> and <code>onBind()</code>
+    methods. Citrix Receiver for Android waits only two seconds
+    for binding.</p>
+</li>
+</ul>
+<h2 id="naming-virtual-channels">Naming Virtual Channels<a class="headerlink" href="#naming-virtual-channels" title="Permanent link">&para;</a></h2>
+<p>Virtual channels are referred to by a seven-character (or shorter) ASCII
+name. In several previous versions of the ICA protocol, virtual channels
+were numbered. The numbers are now assigned dynamically based on the
+ASCII name, making implementation easier.</p>
+<p>When developing virtual channel code for internal use only, you can use
+any seven-character name that does not conflict with existing virtual
+channels. Use only upper and lowercase ASCII letters and numbers. Follow
+the existing naming convention when adding your own virtual channels.</p>
+<p>The predefined channels, which begin with the OEM identifier CTX, are
+for use only by Citrix.</p>
+<h2 id="declare-intent-filter-in-manifest-file">Declare Intent Filter in Manifest File<a class="headerlink" href="#declare-intent-filter-in-manifest-file" title="Permanent link">&para;</a></h2>
+<p>In the manifest file of your package, you must declare the following
+intent action in the section for virtual driver service (Refer to the
+sample code) so that Citrix Receiver for Android can detect and bind
+your virtual driver service.</p>
+<div class="codehilite"><pre><span></span>&lt;intent-filter&gt;
+
+    &lt;action android:name=&quot;com.citrix.action.vcsdk.BIND&quot;&gt;
+
+&lt;/intent-filter&gt;
+</pre></div>
+
+
+<h2 id="aidl-interfaces-overview">AIDL Interfaces Overview<a class="headerlink" href="#aidl-interfaces-overview" title="Permanent link">&para;</a></h2>
+<p>When the virtual driver and Citrix Receiver
+for Android bind successfully, they communicate with each other through
+the AIDL interfaces.</p>
+<p>In this version of the Virtual Channel SDK, Citrix provides two AIDL
+interfaces: <code>IVCService.aidl</code> and <code>IVCCallback.aidl</code>. You must implement the
+APIs in <code>IVCService.aidl</code>. The APIs in <code>IVCCallback.aidl</code> have been
+implemented by Citrix for your usage.</p>
+<p>You must include the two AIDL interfaces in your custom virtual driver
+package. And the contents of the two interfaces must not be modified.</p>
+<h3 id="user-implemented-methods">User-implemented Methods<a class="headerlink" href="#user-implemented-methods" title="Permanent link">&para;</a></h3>
+<p>All user-defined methods are in IVCService.aidl. You must implement:</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>canLoad</code></td>
+<td>Checks whether the driver is ready to load. It is the first remote call in Citrix Receiver for Android.</td>
+</tr>
+<tr>
+<td><code>getDisplayName</code></td>
+<td>Returns the display name of the virtual channel. It is sent to the server and used to report errors from the virtual channel.</td>
+</tr>
+<tr>
+<td><code>getMinVersionNumber</code></td>
+<td>Returns <code>minVersion</code>, the lowest supported version of this virtual channel. It is used to allow version negotiation between the client-side and the server-side components.</td>
+</tr>
+<tr>
+<td><code>getMaxVersionNumber</code></td>
+<td>Returns <code>maxVersion</code>, the highest supported version of this virtual channel. It is used to allow version negotiation between the client-side and the server-side components.</td>
+</tr>
+<tr>
+<td><code>getVCName</code></td>
+<td>Returns <code>streamName</code> used to identify the virtual channel to the server. For more information, see Naming Virtual Channels. Note that strings starting with, "CTX" are reserved for use only by Citrix.</td>
+</tr>
+<tr>
+<td><code>initializeDriver</code></td>
+<td>This method is for the service to do initialization work before the virtual channel starts. Returning Boolean values shows the status of initialization.</td>
+</tr>
+<tr>
+<td><code>getDriverInfo</code></td>
+<td>When an ICA session starts, Citrix Receiver for Android calls this method to retrieve module-specific information for transmission to the host. Information is returned to the server side of the virtual channel by <code>WFVirtualChannelQuery()</code>.</td>
+</tr>
+<tr>
+<td><code>driverStart</code></td>
+<td>Called when Citrix Receiver for Android starts the virtual driver. The instance of <code>IVCCallback</code> is provided to virtual driver by this API.</td>
+</tr>
+<tr>
+<td><code>icaDataArrival</code></td>
+<td>This method is called repeatedly when the virtual driver is running. The implementation must read command bytes from its vStream byte array and process them accordingly.</td>
+</tr>
+<tr>
+<td><code>driverShutdown</code></td>
+<td>Called when the virtual channel is shut down. Once the virtual channel closes, data cannot be sent to the server. This method can free all resources held by the virtual channel.</td>
+</tr>
+<tr>
+<td>### Callback Methods</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>The virtual driver uses the callback method to send data to the server and confirm a driver shutdown event. When driverStart starts the virtual driver, an instance of <code>IVCCallback</code> is passed to the virtual driver.</p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sendData</code></td>
+<td>Sends a package of virtual channel data to the server.</td>
+</tr>
+<tr>
+<td><code>confirmShutdown</code></td>
+<td>To make sure that all data sent from the Client is done, and it is safe to terminate the channel. Called to confirm that the virtual channel can be shutdown. It must be called after <code>driverShutdown</code> is called. When <code>driverShutdown</code> is called, Citrix Receiver for Android waits for confirmation. The virtual driver can call <code>confirmShutdown</code> to confirm that the virtual channel can be closed. And if this method is not called in time, the virtual channel will still be closed. Once the virtual channel closes, the data sent to the server will be ignored.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="helper-class">Helper Class<a class="headerlink" href="#helper-class" title="Permanent link">&para;</a></h2>
+<h3 id="marshalljava">Marshall.java<a class="headerlink" href="#marshalljava" title="Permanent link">&para;</a></h3>
+<p>To make the implementation of the virtual driver more convenient, Citrix provides a help class <code>Marshall.java</code> in this version of SDK. Data coming from the server and sending to the server are all encapsulated as byte array. <code>Marshall.java</code> provides some helper methods to read data from byte array and write data to byte array or <code>ByteArraryOutputStream</code>. Citrix encourages you to include this class in your package and use the methods in <code>Marshall.java</code> to avoid making mistakes. For usage of these methods, refer to the three samples.</p>
+              
+               
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<!--<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span class="prev"><a href="../using-example-programs/"><i class="fa fa-angle-left"></i> Previous</a></span>
+      
+      
+        <span class="next"><a href="../known-limitations/">Next <i class="fa fa-angle-right"></i></a></span>
+      
+    </span>
+	<div class="footer-right">
+		<ul class="social-links">
+			<li class="list-inline"><a href="https://twitter.com/citrix"><i class="fa fa-twitter"></i>@citrix</a></li>
+			<li class="list-inline"><a href="mailto:support@citrix.com"><i class="fa fa-envelope-o"></i>support@citrix.com</a></li>
+		</ul>
+		<ul class="inner-pages">
+			<li class="list-inline"><a href="http://citrix.com/about/legal">Privacy and Terms</li>
+		</ul>
+	</div>
+</div>-->
+
+</body>
+</html>

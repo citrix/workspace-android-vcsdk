@@ -1,0 +1,17 @@
+site_name: Citrix Virtual Channel SDK
+site_description: Reference for the Citrix Virtual Channel SDK for Android
+theme_dir: theme_multi
+markdown_extensions:
+  - admonition
+  - codehilite(guess_lang=false)
+  - toc(permalink=true)
+  - footnotes
+  - meta
+
+pages:
+- The Citrix Virtual Channel SDK: index.md
+- System Requirements: system-requirements.md
+- Using Example Programs: using-example-programs.md
+- Programming Guide: programming-guide.md
+- Known Limitations: known-limitations.md
+- Programming Reference: programming-reference.md

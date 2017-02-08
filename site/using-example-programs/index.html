@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Using Example Programs - Citrix Virtual Channel SDK</title>
+  
+
+  <link rel="shortcut icon" href="
+https://www.citrix.com/etc/designs/citrix/icon-favicon.png">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  <link rel="stylesheet" href="../css/override.css" type="text/css" />
+  <link rel="stylesheet" href="../css/font-awesome.css" type="text/css" />
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Using Example Programs";
+    var mkdocs_page_input_path = "using-example-programs.md";
+    var mkdocs_page_url = "/using-example-programs/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script>
+  <script src="../js/custom.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+	<div class="header-top">
+		<div class="header-top-left">
+			<a href="http://citrix.github.io" class="logo-position"><img height="60" src="https://www.citrix.com/content/dam/citrix/en_us/images/logos/citrix/citrix-logo-reverse.png" target="_blank" class="logo-citrix"><span style="color:#fff;font-size: 20px;position: relative;top:4px;left: 5px">SDK Reference</span></a>
+		</div>
+		<div class="header-top-right">
+			<ul>
+			<!--	<li class="list-inline home"><a href="..">HOME</a></li>
+				<li class="list-inline support"><a href="http://support.citrix.com">SUPPORT</a></li>-->
+			<form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+            <li class="list-inline support"><input name="q" id="txtName" type="text" placeholder="Search SDKs" 
+            class="searchdocs"><a class="fa fa-search errspan" onclick="getElementById('rtd-search-form').submit()"></a></li>
+			</form>
+				<!--<li class="list-inline"><a href="http://citrix.com/download">DOWNLOADS</a></li>-->
+			</ul>
+
+		</div>
+	</div>
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+	<a class="fa fa-search" onclick="getElementById('rtd-search-form').submit()"></a>
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 nochildli ">
+        <a class="" style="width:322px;" href="..">The Citrix Virtual Channel SDK</a>
+
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 nochildli ">
+        <a class="" style="width:322px;" href="../system-requirements/">System Requirements</a>
+
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 nochildli current">
+        <a class="current" style="width:322px;" href="./">Using Example Programs</a>
+
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 nochildli ">
+        <a class="" style="width:322px;" href="../programming-guide/">Programming Guide</a>
+
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 nochildli ">
+        <a class="" style="width:322px;" href="../known-limitations/">Known Limitations</a>
+
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 nochildli ">
+        <a class="" style="width:322px;" href="../programming-reference/">Programming Reference</a>
+
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+         <!-- <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Using Example Programs</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div> -->
+          <div role="main">
+            <div class="section">
+             
+                <h1 id="using-example-programs">Using Example Programs<a class="headerlink" href="#using-example-programs" title="Permanent link">&para;</a></h1>
+<p>The example programs included with the Virtual Channel SDK are buildable, working virtual channels. Use these examples to:</p>
+<ul>
+<li>
+<p>Verify that your environment is suitable by building a known working example program.</p>
+</li>
+<li>
+<p>Provide working examples of code that can be modified to suit your requirements.</p>
+</li>
+<li>
+<p>Explore the features and functionality provided in the Virtual Channel SDK.</p>
+</li>
+</ul>
+<p>Each of these example programs comprises a client virtual driver and a server application. The server-side application is run from the command line within an ICA session. A single virtual channel comprises an application pair.</p>
+<p>The example programs included with the Virtual Channel SDK are:</p>
+<p><strong>Ping</strong>: Records the round-trip delay time for a test packet sent over a virtual channel.</p>
+<p><strong>Mix</strong>: Demonstrates a mechanism to call functions (for example, to get the time of day) on a remote client.</p>
+<p><strong>Over</strong>: Simple asynchronous application that demonstrates how to code an application where the server must receive a response from the client asynchronously, and where the type of packet being sent to the client is different from the type received.</p>
+<h2 id="ping">Ping<a class="headerlink" href="#ping" title="Permanent link">&para;</a></h2>
+<p>Ping is a simple program that records the round-trip delay time for a test packet sent over a virtual channel. The server sends a packet to the client and the client responds with a packet containing the time it received the original packet from the server. This sequence is repeated a specified number of times, and then the program displays the round-trip time for each ping and the average round-trip delay time.</p>
+<p>For this example, there is no significant difference between a BEGIN packet and an END packet. The two types of packets are provided as an example for writing your own virtual channel protocols.</p>
+<p>This program demonstrates:</p>
+<ul>
+<li>
+<p>How to write a manifest file so that Citrix Receiver for Android can detect and bind the service.</p>
+</li>
+<li>
+<p>How to send information to a server-application (in this case, the number of times to send packets to the client).</p>
+</li>
+<li>
+<p>How to transfer data synchronously. The sequence of events is: <code>{SrvWrite, ClntRead, ClntWrite, SrvRead} {SrvWrite, ClntRead} {...}</code>. The server waits for the client to reply before sending the next packet.</p>
+</li>
+</ul>
+<h3 id="packet-format">Packet Format<a class="headerlink" href="#packet-format" title="Permanent link">&para;</a></h3>
+<p>The following packet is exchanged between the client and the server.</p>
+<div class="codehilite"><pre><span></span>Byte 0-1 uSign; // Signature
+Byte 2-3 uType; // Type, BEGIN or END, from server
+Byte 4-5 uLen; // Packet length from server
+Byte 6-7 uCounter; // Sequencer
+Byte 8-11 ulServerMS; // Server millisecond clock
+Byte 12-15 ulClientMS; // Client millisecond clock
+</pre></div>
+
+
+<h2 id="mix">Mix<a class="headerlink" href="#mix" title="Permanent link">&para;</a></h2>
+<p>Mix demonstrates a mechanism that you can use to call functions on a
+remote client (for example to get the time of day). This program
+demonstrates an extensible scheme for making function calls from the
+server to the client that allows the server to specify when it expects a
+response from the client and when it does not. This method can increase
+performance, because the server does not have to constantly wait for a
+reply from the client.</p>
+<p>The server calls a series of simple functions:</p>
+<ul>
+<li>
+<p><strong><code>AddNo</code></strong>: Add two numbers and return the sum as the return value.</p>
+</li>
+<li>
+<p><strong><code>DispStr</code></strong>: Write a string to the log file. There is no return value (write-only function).</p>
+</li>
+<li>
+<p><strong><code>Gettime</code></strong>: Read the client time and return it as the return value.</p>
+</li>
+</ul>
+<p>The actual implementation of these functions is on the client side. The server conditionally waits for the response from the client, depending on the function being executed. For example, the server waits for the result of the <code>AddNo</code> or <code>Gettime</code> function, but not the write-only function <code>DispStr</code>, which returns no result.</p>
+<h3 id="packet-format_1">Packet Format<a class="headerlink" href="#packet-format_1" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>Byte 0-1 uType // Packet type
+Byte 2-3 uFunc; // Index of Function
+Byte 4-7 uLen; // Length of data
+Byte 8-9 fRetReq; // True if return value required
+Byte 10-13 dwRetVal; // Return Value from client
+Byte 14-15 dwLen1; // length of data for \#1 LpVoid
+Byte 16-17 dwLen2; // length of data for \#2 LpVoid
+</pre></div>
+
+
+<p>The data consists of the structure above followed by the arguments to the function being called. uLen is the total length of the data being sent, including the arguments. DwLen1 is the length of the data pointed to by a pointer argument.</p>
+<h3 id="sequence-of-events">Sequence of Events<a class="headerlink" href="#sequence-of-events" title="Permanent link">&para;</a></h3>
+<p>The Mix program demonstrates the following sequence of events. See the graphic below.</p>
+<p>This figure illustrates the sequence of events that occur when you use the Mix program, starting at the top.</p>
+<p><img alt="" src="../media/image4.png" /></p>
+<h2 id="over">Over<a class="headerlink" href="#over" title="Permanent link">&para;</a></h2>
+<p>Over is a simple asynchronous application. It demonstrates how to code an application in which the server must receive a response from the client asynchronously, and the type of packet being sent to the client is different from the type received.</p>
+<p>When the Over program begins, it:</p>
+<ol>
+<li>
+<p>Spawns a thread that waits for a response from the client.</p>
+</li>
+<li>
+<p>Begins sending data packets with sequence numbers to the client.</p>
+</li>
+<li>
+<p>(After sending the last packet of data) sends a packet with a sequence number of <code>NO\_MORE\_DATA</code>, and then closes the connection.</p>
+</li>
+</ol>
+<p>The client receives packets and inspects the sequence number. For every sequence number divisible by 10, the client increases the sequence number by 7 and sends a response to the server. These numbers are chosen arbitrarily to demonstrate that the client can asynchronously send data to the server at any time.</p>
+<p>The packet type used to send data from the server to the client is different from the packet type used to receive data from the client.</p>
+<h3 id="packet-format-from-server-to-client">Packet Format - From Server to Client<a class="headerlink" href="#packet-format-from-server-to-client" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>Byte 0-1 uSign; // Signature
+Byte 2-3 uType; // Type, BEGIN or END, from server
+Byte 4-5 uLen; // Packet length from server
+Byte 6-7 uCounter; // Sequencer
+Byte 8-11 ulServerMS; // Server millisecond clock
+</pre></div>
+
+
+<h3 id="packet-format-from-client-to-server">Packet Format - From Client to Server<a class="headerlink" href="#packet-format-from-client-to-server" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>Byte 0-1 uType; // Type OVERFLOW\_JUMP from client
+Byte 2-3 uLen; // Packet length from client
+Byte 4-5 uCounter; // seqUencer
+</pre></div>
+
+
+<h3 id="sequence-of-events_1">Sequence of Events<a class="headerlink" href="#sequence-of-events_1" title="Permanent link">&para;</a></h3>
+<p>This figure illustrates the sequence of events that occur when you use the Over program, starting at the top.</p>
+<p><img alt="" src="../media/image5.png" /></p>
+<h2 id="building-examples">Building Examples<a class="headerlink" href="#building-examples" title="Permanent link">&para;</a></h2>
+<h3 id="building-a-server-side-example-using-nmake">Building a server-side example using Nmake<a class="headerlink" href="#building-a-server-side-example-using-nmake" title="Permanent link">&para;</a></h3>
+<p>Examples of the latest server-side executables have been provided for testing. You can download the latest Windows Virtual Channel SDK in order to develop the server-side component.</p>
+<h3 id="building-a-client-side-example">Building a client-side example<a class="headerlink" href="#building-a-client-side-example" title="Permanent link">&para;</a></h3>
+<p>Citrix provides APKs for the three sample virtual drivers. You can build the APKs yourself. The packages for sample virtual drivers are built using Gradle.</p>
+<p>Environment information of sample code:</p>
+<ul>
+<li>
+<p>Gradle version: 2.10.</p>
+</li>
+<li>
+<p>Gradle build tool version: 21.1.2.</p>
+</li>
+<li>
+<p>Android SDK version: 21.</p>
+</li>
+<li>
+<p>JDK version: Oracle JDK 7.</p>
+</li>
+</ul>
+<p>Building steps:</p>
+<ol>
+<li>
+<p>Sets <code>\$JAVA\_HOME, \$ANDROID\_HOME, \$GRADLE\_HOME</code> to the directory you installed. Adds <code>\$JAVA\_HOME and \$GRADLE\_HOME/bin</code> to <code>\$PATH</code>.</p>
+</li>
+<li>
+<p>Opens a Command line in the root directory of a sample package.</p>
+</li>
+<li>
+<p>Runs “gradle assemble” in Commandline.</p>
+</li>
+<li>
+<p>When a build completes, you can find the APKs under <code>./app/build/outputs/apk</code>.</p>
+</li>
+</ol>
+<p>The APKs must be installed to your device before an ICA session launches.</p>
+<h2 id="running-an-example-virtual-channel">Running an Example Virtual Channel<a class="headerlink" href="#running-an-example-virtual-channel" title="Permanent link">&para;</a></h2>
+<p>Examples of the latest server-side executables have been provided for testing.</p>
+<ol>
+<li>
+<p>On a client installed with the client-side example, connect to a server running XenApp or XenDesktop with the associated server-side example.</p>
+</li>
+<li>
+<p>Within the ICA session, run the server-side executable.</p>
+</li>
+</ol>
+<p>The server-side example queries the client-side virtual driver, and then displays the driver information. Use the <code>-d</code> parameter to display detailed information. For Ping only: <code>CTXPING</code> sends <code>PingCount</code> separate pings. <code>PingCount</code> has a default value of three, but can be set in the <code>\[Ping\]</code> section of the <code>Module.ini</code> file. Each ping consists of a <code>BEGIN</code> packet and an <code>END</code> packet. </p>
+              
+               
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<!--<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span class="prev"><a href="../system-requirements/"><i class="fa fa-angle-left"></i> Previous</a></span>
+      
+      
+        <span class="next"><a href="../programming-guide/">Next <i class="fa fa-angle-right"></i></a></span>
+      
+    </span>
+	<div class="footer-right">
+		<ul class="social-links">
+			<li class="list-inline"><a href="https://twitter.com/citrix"><i class="fa fa-twitter"></i>@citrix</a></li>
+			<li class="list-inline"><a href="mailto:support@citrix.com"><i class="fa fa-envelope-o"></i>support@citrix.com</a></li>
+		</ul>
+		<ul class="inner-pages">
+			<li class="list-inline"><a href="http://citrix.com/about/legal">Privacy and Terms</li>
+		</ul>
+	</div>
+</div>-->
+
+</body>
+</html>
