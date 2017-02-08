@@ -35,6 +35,8 @@ The client-side custom virtual channel driver executes in the context of the cli
 
 This figure illustrates the virtual channel client-server connection:
 
+![](./vc_protocol.png)
+
 Citrix Receiver for Android is responsible for demultiplexing the virtual channel data from the ICA data stream and routing it to the correct processing module (in this case, the virtual driver). It is also responsible for gathering and sending virtual channel data to the server through the ICA connection. Citrix Receiver for Android does not know any data package detail for each virtual channel and it only transfers all available data between the server and the client virtual driver.
 
 The following is an overview of the client-server data exchange using a virtual channel:
