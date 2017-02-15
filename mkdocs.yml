@@ -9,7 +9,7 @@ markdown_extensions:
   - meta
 
 pages:
-- The Citrix Virtual Channel SDK: index.md
+- Introduction: index.md
 - System Requirements: system-requirements.md
 - Using Example Programs: using-example-programs.md
 - Programming Guide: programming-guide.md
