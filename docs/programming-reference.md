@@ -152,7 +152,7 @@ Returns `byte[]`, the output byte array to be sent to the server.
 
 ## driverStart
 
-Called when the virtual driver is started by Citrix Receiver for Android.
+Called when the virtual driver is started by Citrix Workspace app for Android.
 
 ### Calling Convention
 ```
@@ -194,14 +194,14 @@ None
 
 ### Remarks
 
-Because Citrix Receiver for Android does not know any package detail, it only transfers all available data from ICA stream to the virtual driver by calling this method. If the virtual channel package is too large, the whole package may not arrive at the same time. That means the implementation of this method must have the ability to handle partial package. See Ping, Over
+Because Citrix Workspace app for Android does not know any package detail, it only transfers all available data from ICA stream to the virtual driver by calling this method. If the virtual channel package is too large, the whole package may not arrive at the same time. That means the implementation of this method must have the ability to handle partial package. See Ping, Over
 and Mix sample codes, which provide examples about how to handle partial package.
 
 If the server-application sends several packages continuously, more than one package may come in the same byte array. Thus, the implementation of this method must have the ability to handle more than one package in the array. See Over and Mix sample codes, which provide the example about how to handle more than one packages in one byte array. For Ping sample, server application sends data synchronously. The server waits for the client to reply before sending the next packet, so Ping sample doesn’t need to handle this scenario.
 
 ## driverShutdown
 
-Called when virtual channel is shut down by Citrix Receiver for Android.
+Called when virtual channel is shut down by Citrix Workspace app for Android.
 
 ### Calling Convention
 ```
@@ -219,7 +219,7 @@ None
 
 This method is to inform the virtual driver that the virtual channel
 closes. Once virtual channel closes, data cannot be sent to server. And
-Citrix Receiver for Android waits for confirmation after calling this
+Citrix Workspace app for Android waits for confirmation after calling this
 method. If virtual driver doesn’t call `confirmShutdown()` to confirm in
 time, virtual channel keeps close.
 
@@ -230,7 +230,8 @@ To send a package of channel protocol to the server.
 ### Calling Convention
 
 ```
-void sendData(in byte[] data, in int off, in int length);```
+void sendData(in byte[] data, in int off, in int length);
+```
 
 ### Parameters
 
@@ -276,7 +277,7 @@ None
 
 To make sure that all data sent from the Client is done, and it is safe
 to terminate the channel. This method must be called after
-driverShutdown is called. When `driverShutdown` is called, Citrix Receiver
+driverShutdown is called. When `driverShutdown` is called, Citrix Workspace app
 for Android waits for confirmation. Virtual driver can call
 confirmShutdown to confirm that the virtual channel can be closed. And
 if this method is not called in time, the virtual channel is still
@@ -355,7 +356,8 @@ endian order.
 ### Calling Convention
 
 ```
-void writeInt2(ByteArrayOutputStream stream, int i)```
+void writeInt2(ByteArrayOutputStream stream, int i)
+```
 
 ### Parameters
 
@@ -378,7 +380,8 @@ Writes an int to an output stream in the form of four bytes, little endian order
 ### Calling Convention
 
 ```
-void writeInt4(ByteArrayOutputStream stream, int i)```
+void writeInt4(ByteArrayOutputStream stream, int i)
+```
 
 ### Parameters
 
@@ -402,7 +405,8 @@ byte short.
 ### Calling Convention
 
 ```
-short readInt2(byte[] buffer, int index)```
+short readInt2(byte[] buffer, int index)
+```
 
 ### Parameters
 
@@ -429,7 +433,8 @@ Reads four bytes from a byte array in little endian order and creates a
 ### Calling Convention
 
 ```
-int readInt4(byte[] buffer, int index)```
+int readInt4(byte[] buffer, int index)
+```
 
 ### Parameters
 
@@ -457,7 +462,8 @@ unsigned value stored in an integer.
 ### Calling Convention
 
 ```
-int readUInt2(byte[] buffer, int index)```
+int readUInt2(byte[] buffer, int index)
+```
 
 ### Parameters
 
@@ -484,7 +490,8 @@ unsigned value stored in an integer.
 ### Calling Convention
 
 ```
-int readUInt1(byte[] buffer, int index)```
+int readUInt1(byte[] buffer, int index)
+```
 
 ### Parameters
 

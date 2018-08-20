@@ -26,7 +26,7 @@ For this example, there is no significant difference between a BEGIN packet and 
 
 This program demonstrates:
 
-* How to write a manifest file so that Citrix Receiver for Android can detect and bind the service.
+* How to write a manifest file so that Citrix Workspace app for Android can detect and bind the service.
 
 * How to send information to a server-application (in this case, the number of times to send packets to the client).
 

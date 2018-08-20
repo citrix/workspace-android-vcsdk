@@ -4,13 +4,13 @@ There are two known limitations for some Android devices of specific manufacture
 
 1.  For some Huawei devices, secondary launch is disabled by default. To
     use this version of the Virtual Channel SDK, you must change the
-    setting on your device. 
-    
+    setting on your device.
+
     For example, for Huawei P9, follow the steps below:
-    
+
     In Phone Manager, choose **App auto-launch**, then choose **Secondary launch
-management**, and enable the virtual driver services. 
-![](media/image6.png)
+management**, and enable the virtual driver services.
+[alt_text!](/workspace-android-vcsdk/docs/huawei-phone-manager.png)
 
 1.  For some Samsung devices with Android 6.0.1, if the App containing
     the custom virtual driver service is not in foreground for long
