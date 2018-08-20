@@ -1,4 +1,4 @@
-site_name: itrix Virtual Channel SDK for Citrix Workspace app for Android
+site_name: Citrix Virtual Channel SDK for Citrix Workspace app for Android
 site_description: Citrix Virtual Channel SDK for Citrix Workspace app for Android
 theme_dir: citrix-sdk
 markdown_extensions:
