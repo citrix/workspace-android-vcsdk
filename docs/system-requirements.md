@@ -5,14 +5,16 @@ The Virtual Channel SDK is based on the Android service binding mechanism. The c
 ## Execution Environment Requirements
 
 ### Server requirement
-The Android Virtual Channel SDK is supported on Citrix XenApp 6.5 and later, and on Citrix XenDesktop 7.6 and later.
+
+The Android Virtual Channel SDK is supported on Citrix XenApp 6.5 and later, and on Citrix Virtual Apps and Desktops 7.6 and later.
 
 ### Android client requirement
+
 Citrix Workspace app for Android 3.11 and later
 
 ## Architecture
 
-A Citrix Independent Computing Architecture (ICA) virtual channel is a bidirectional, error-free connection for the exchange of generalized packet data between a server running Citrix XenApp or XenDesktop, and a client device. You can use virtual channels to add functionality to clients. Uses for virtual channels include:
+A Citrix Independent Computing Architecture (ICA) virtual channel is a bidirectional, error-free connection for the exchange of generalized packet data between a server running Citrix Virtual Apps and Desktops, and a client device. You can use virtual channels to add functionality to clients. Uses for virtual channels include:
 
 * Support for administrative functions
 
@@ -22,9 +24,9 @@ A Citrix Independent Computing Architecture (ICA) virtual channel is a bidirecti
 
 ## Virtual Channel Overview
 
-An ICA virtual channel is a bidirectional, error-free connection for the exchange of generalized packet data between a client and a server running XenApp or XenDesktop. Each implementation of an ICA virtual channel consists of two components:
+An ICA virtual channel is a bidirectional, error-free connection for the exchange of generalized packet data between a client and a server running Citrix Virtual Apps and Desktops. Each implementation of an ICA virtual channel consists of two components:
 
-**Server-side portion on the computer running XenApp or XenDesktop**
+**Server-side portion on the computer running Citrix Virtual Apps and Desktops**
 
 The virtual channel on the server side is a normal Win32 process.It can be an application or a Windows NT service.
 
@@ -40,7 +42,7 @@ Citrix Workspace app for Android is responsible for demultiplexing the virtual c
 
 The following is an overview of the client-server data exchange using a virtual channel:
 
-1.  The client connects to the server running XenApp or XenDesktop. The client passes information about the virtual channels that it supports to the server.
+1.  The client connects to the server running Citrix Virtual Apps and Desktops. The client passes information about the virtual channels that it supports to the server.
 
 2.  The server-side application starts, obtains a handle to the virtual channel, and optionally queries for additional information about the channel.
 
@@ -69,7 +71,6 @@ ICA provides its own reliability mechanisms even when the underlying transport i
 
 ## Citrix Workspace app and Virtual Driver Interaction
 
-
 In Citrix Workspace app for Android, the custom virtual driver is implemented as a service and it must be installed on the Android device before an ICA session is launched. Once a user launches an ICA session, Citrix Workspace app for Android binds this service by using the Android API bindService with the `BIND\_AUTO\_CREATE` flag set. That means that if the service has not been started before the ICA session launches, Citrix Workspace app for Android starts this service automatically and the lifecycle of the service is contingent on the ICA session. Only when binding successfully, is the virtual channel created. If the virtual driver service is not bound successfully, the ICA session can still be launched but no virtual channel is created for the virtual driver. So the virtual driver you write must never block or perform time-consuming tasks in the onCreate(), onBind() methods which might increase the risk of binding failure.
 
 For more information about Android service binding and lifecycle, see the [Android developer documentation](https://developer.android.com/guide/components/bound-services.html).
@@ -95,7 +96,6 @@ The following process occurs when a user starts the client:
 Considering the particulars of the Android platform, the virtual driverservice can be collected by the OS when resources are not sufficientafter the ICA session launches. Citrix Workspace app for Android has a basic mechanism to try to restart the service and restore the data stream by repeating the steps above and passing blocked data. With this mechanism,in some cases, a user does not need to relaunch the ICA session when the virtual driver is killed. When Citrix Workspace app for Android is not aware of the contents of the custom virtual channel package, this mechanism is not reliable. Although the probability is very low, if the virtual driver service is killed after the ICA session launches and thismechanism doesn’t work, the user has to relaunch the ICA session to make the virtual driver work again.
 
 ## Virtual Channel Packets
-
 
 ICA does not define the contents of a virtual channel packet. The contents are specific to the particular virtual channel and are not interpreted or managed by the ICA data stream manager. You must develop your own protocol for the virtual channel data.
 

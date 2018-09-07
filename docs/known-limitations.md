@@ -12,10 +12,10 @@ There are two known limitations for some Android devices of specific manufacture
 management**, and enable the virtual driver services.
 [alt_text!](/workspace-android-vcsdk/docs/huawei-phone-manager.png)
 
-1.  For some Samsung devices with Android 6.0.1, if the App containing
+1.  For some Samsung devices with Android 6.0.1, if the app containing
     the custom virtual driver service is not in foreground for long
     time, the virtual driver service cannot be started by Citrix
-    Receiver for Android. The requirement for using Samsung devices with
+    Workspace app for Android. The requirement for using Samsung devices with
     Android 6.0.1 is that you must launch virtual driver App manually
     every time before you launch an ICA session. Note that the
     requirement here is not to start the virtual driver
