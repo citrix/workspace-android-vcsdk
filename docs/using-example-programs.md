@@ -162,7 +162,7 @@ The APKs must be installed to your device before an ICA session launches.
 
 Examples of the latest server-side executables have been provided for testing.
 
-1.  On a client installed with the client-side example, connect to a server running XenApp or XenDesktop with the associated server-side example.
+1.  On a client installed with the client-side example, connect to a server running Citrix Virtual Apps and Desktops with the associated server-side example.
 
 2.  Within the ICA session, run the server-side executable.
 
