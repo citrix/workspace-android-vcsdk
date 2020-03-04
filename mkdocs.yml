@@ -1,9 +1,10 @@
 site_name: Citrix Virtual Channel SDK for Citrix Workspace app 1808 for Android
 site_description: Citrix Virtual Channel SDK for Citrix Workspace app 1808 for Android 
 site_title: Developer Docs
+site_url: https://developer-docs.citrix.com/
 
 # Copyright
-copyright: 'Copyright &copy; 1999-2019 Citrix Systems, Inc. All rights reserved. '
+copyright: 'Copyright &copy; 1999-2020 Citrix Systems, Inc. All rights reserved. '
 
 extra_css:
   - 'assets/stylesheets/extra.css'
